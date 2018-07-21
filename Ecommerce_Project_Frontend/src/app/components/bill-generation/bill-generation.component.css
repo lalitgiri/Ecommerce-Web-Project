@@ -1,0 +1,74 @@
+.parent-div{
+    background: white;
+    text-align: initial;
+    vertical-align: text-top;
+}
+.details{
+    margin-left: 3vw;
+    padding: 1vw;
+    text-align: left;
+    width:40%;
+    height:auto;
+    display: inline-block;
+    vertical-align: text-top;
+
+}
+
+.date-header{
+  
+    padding: 1vw;
+    text-align: right;
+    width:50%;
+    height:auto;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.user{
+    background: wheat;
+}
+
+.user-details{
+
+    margin-left: 3vw;
+    padding: 1vw;
+    text-align: left;
+    width:40%;
+    height:auto;
+    display: block;
+   
+}
+
+.order-details{
+    margin: 3vw;
+    min-height: 40vw;
+    padding-bottom: 20%;
+    
+}
+table{
+    border:1px solid black;
+    margin: 0 auto;
+    min-height:40vh;
+    vertical-align: text-top;
+}
+.item{
+    padding: 1vw;
+    width:10%;
+}
+
+.description{
+    text-align: center;
+    padding: 1vw;
+    width:62%;
+}
+thead{
+    border-bottom: 1px solid black;
+}
+td{
+    vertical-align: text-top;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+

@@ -1,0 +1,45 @@
+
+h1{
+    margin:0 45vw;
+    font-style: italic;
+    font-size: 3vw;
+}
+
+.sub-div-list{
+    height:26vw;
+    width:25vw;
+    border-radius: 1vw;
+    margin: 1vw;
+    text-align: center;
+    border:0.2vw solid gainsboro;
+    display: inline-table;
+    background:white;
+}
+.cdiv{
+    padding:0vw 7vw;
+  
+    }
+.sub-div-list:hover{    
+    border:0.2vw solid cadetblue;  
+}
+
+.imageAlign{
+  /*  height: auto;;
+    width:100%;*/
+    height: 15vw;
+    width:auto;
+    padding-top: 1vw;
+    border-radius: 0.5vw;
+}
+label{
+    font-size: 0.8vw;
+}
+.heading{
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin:0 40vw;
+    font-style: italic;
+    font-size: 1.8vw;
+    font-weight: bold;
+}

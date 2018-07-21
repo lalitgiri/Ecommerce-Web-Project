@@ -1,0 +1,80 @@
+.parent{
+    padding: 1vw;
+    margin:1vw;
+    align-content: center;
+    
+}
+.div{
+    padding: 1vw;
+    margin:2vw;
+    color:white;
+    background: cadetblue;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    width:auto;
+}
+.sub-div{
+    padding: 1vw;
+    margin:1vw;
+    background:ghostwhite;
+    color: black;
+    max-height: 35vw;
+    overflow:scroll;
+  
+}
+
+.floatproperty{
+    float:right;
+    border-radius: 0.5vw;
+    
+}
+.center1{
+    align-content: center;
+}
+.content-div{
+    height:15vw;
+    width:auto;
+    padding: 1vw;
+    max-height: 20vw;
+    display: inline-block;
+   
+}
+
+.imgDiv{
+    width:20%;
+    height:10vw;
+    display: inline-block;   
+}
+.dataDiv{
+    color: black;
+    padding: 1vw;
+    width:80%;
+    height:15vw;
+    float:right;
+    overflow-x:scroll;
+    overflow-y: hidden;
+}
+.imageAlign{
+    border-radius: 0.5vw;
+    height: 50%;
+    width:50%;
+}
+
+
+::-webkit-scrollbar {
+    width: 0.5 vw;
+    background: ghostwhite; /* make scrollbar transparent */
+}
+
+.app-bill-generation{
+    background: white;
+    margin-left:10%;
+    margin-right:  10%;
+    border: 1vh ridge black;
+}
+
+.print-invoice-button{
+    float: right;
+    margin:1vw;
+}
+

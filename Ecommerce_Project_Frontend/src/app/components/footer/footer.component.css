@@ -1,0 +1,26 @@
+.parentDiv{
+    height: auto;
+    background: cadetblue;
+    padding-left: 1vw;
+    padding-right:1vw;
+    font-size: 1.3vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  /* position: fixed;*/
+   
+}
+
+.imageAlign{
+    margin-left: 2vw;
+    border-radius: 0.5vw;
+    height:auto;
+    width:50%;
+   
+}
+.head-label{
+    font-style: italic;
+    font-size: 1vw;;
+    margin-right: 1vw;
+}

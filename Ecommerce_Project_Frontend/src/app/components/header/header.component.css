@@ -1,0 +1,158 @@
+
+.webSiteName
+{
+        margin-left: 2vw;
+        text-align: center;
+        font-size: 2vw;
+        font-style: oblique;
+        font-family: cursive;
+        color:cornsilk;
+        text-shadow:0.2vw 0.3vw  grey;
+}
+.domain{
+    font-size: 1vw;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 0.07vw;
+    
+} 
+.sub-div-list{
+    padding:0.3vw;
+    min-width:8vw;
+    border-radius: 0.2vw;
+    margin: 0.5vw;
+    color:white;
+    text-align: center;
+    border:0.1vw solid white;
+    display: inline-block;
+    background:cadetblue;
+}
+.sub-div-list:hover{
+    color: black;
+    border:0.1vw solid black;
+}
+a{
+    color:white;
+    cursor: pointer;
+}
+a:hover{
+    color:black;
+    
+}
+ul{
+    position: fixed;
+    right: 2vw;
+}
+.bg-nav{
+    background:cadetblue;
+    border:none;
+    color:white;
+    padding:0%;
+}
+.icon{
+    color: white; 
+}
+.icon:hover{
+    color:black;
+}
+
+
+.searchForm{
+    width: 43vw;
+}
+.btn-bg{
+    background: white;
+    border:none;
+    height:3.1vw;
+    border-top-right-radius: 0.6vw;
+    border-bottom-right-radius: 0.6vw;
+}
+
+.searchIcon{
+    height:2.5vw;
+    width:3vw;
+    
+    
+}
+
+select{
+  
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    margin-left:2vw;
+    height:3.1vw;
+    width:10vw;
+    font-size:1.3vw;
+    border:none;
+    border-bottom-left-radius: 0.6vw;
+    border-top-left-radius: 0.6vw;
+
+}
+
+input[type=text]
+{
+     padding-left: 1vw;
+     margin-left:-0.3vw;
+     height:3.1vw; 
+     font-size:1.3vw;
+     width: 20vw;
+     border:none;
+    
+}
+.disable-selection{
+    user-select: none;
+}
+
+.menu_links {
+    cursor: pointer;
+    
+}
+.menu{
+    color:white;
+    padding:0.5vw;
+    margin-left:2vw; 
+    border:0.1vw solid transparent;
+    border-radius: 0.5vw;
+    text-align: center;
+}
+.menu:hover{
+    color:black;    
+    border:0.1vw solid black;
+}
+.menu-div{
+    min-height:10vw;
+    width:100vw;
+    z-index:1;
+    text-align: center;
+    position: fixed;
+    background: rgba(95, 158, 160,0.4);
+}
+.overflow{
+    width:8vw;
+    height:1vw;
+    text-overflow: ellipsis;
+}
+li{
+    text-align: center;
+}
+
+.div-padding{
+    padding-top: 0.5vw;
+    margin-left: 6vw;
+
+}
+.sub:hover{
+   
+    border-radius: 0.5vw;
+    color:black;    
+    border:0.1vw solid black;
+}
+.support:hover{
+ color:black;   
+}

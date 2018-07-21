@@ -1,0 +1,57 @@
+
+.defaultPropertyRemove{
+    padding-left:0%;
+    margin-right: 1.3vw;
+}
+h3{
+    text-align: center;
+}
+
+label{
+    padding-left: 3vw;
+}
+.bottom-margin{
+    margin-bottom: 1vw;
+    
+}
+
+.tableDimension{
+    height: 20vw;
+    overflow-y: scroll;
+}
+
+tr:hover{
+    background:white;
+}
+thead{
+    background: cadetblue; 
+   }
+
+
+.button-div{
+    margin-top:3vw;
+    padding-left: 3.5vw;    
+}
+
+tr:hover{
+    background: white;
+}
+th.rightBorderRadius{
+    border-top-right-radius: 1vw;
+}
+td.rightBorderRadius{
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+th.leftBorderRadius{
+    border-top-left-radius: 1vw;
+}
+td.leftBorderRadius{
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+.imageSize{
+    height:80%;
+    width:80%;
+}

@@ -1,0 +1,41 @@
+*{
+    font-size: 1.5vw;
+    
+}
+label{
+    color: whitesmoke;
+}
+
+.popUpBox{
+    width:auto;
+    height:auto;
+    background:rgba(0,0,0,0.7);                 
+   
+    padding:2vw;
+    border:0.14vw solid rgba(0, 0, 0,0.5) ;
+    border-top-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    position: relative;
+}
+
+.signUp{
+    font-size: 3vw;
+}
+
+.selectField{
+    color:black;
+    border-radius: 0.3vw;
+    height:3vw;
+    max-width:7vw;
+   
+}
+
+.textField{
+    border:none;
+    color:black;
+    border-radius:0.3vw;
+    width:100vw;
+    height:3vw;
+    padding-left:0.5vw;
+    
+}

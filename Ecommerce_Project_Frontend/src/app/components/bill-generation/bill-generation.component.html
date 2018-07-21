@@ -1,0 +1,83 @@
+<div class="parent-div">
+  <h1>
+    Invoice
+  </h1>
+  <hr/>
+  <div>
+    <span class="details">
+      <label>
+        <b>ZuperMarket Demo Web Project</b>
+      </label>
+      <br/>
+      <label>Escort Colony Near Nahar Kothi,Railway Road, Dadri,Gautam Buddh Nagar, 203207</label>
+      <br/>
+      <label>ZuperMarket.com</label>
+      <br/>
+
+    </span>
+    <span class="date-header">
+      <label>Date: {{today | date:'fullDate'}}</label>
+      <br/>
+      <label>Date: {{today | date:'shortTime'}}</label>
+      <br/>
+      <label>Order Number: Id</label>
+      <br/>
+    </span>
+  </div>
+
+  <hr/>
+
+  <div>
+    <span class="details user">To</span>
+    <div class="user-details" *ngIf="summaryFlag == 'product'">{{orderDetails.userId.name}}
+      <br/>
+      <label>Address: {{orderDetails.address}}</label>
+
+    </div>
+    <div class="user-details" *ngIf="summaryFlag == 'cart'">{{name}}
+        <br/>
+        <label>Address: {{orderDetails.deliveryAddress}}</label>
+  
+      </div>
+      
+  </div>
+  <hr/>
+
+  <div class="order-details">
+    <table>
+      <thead>
+      <tr>
+        <th class="item">Item #</th>
+        <th class="description">Description</th>
+        <th class="item">Quantity</th>
+        <th class="item">Unit Price</th>
+        <th class="item">Total Price</th>
+        </tr>
+      </thead>
+       <tbody  *ngIf="summaryFlag == 'product'" >
+        <tr>
+          
+        <td class="item">Item 1</td>
+        <td class="description">{{orderDetails.itemDetail.productName}}</td>
+        <td class="item">{{orderDetails.quantity}}</td>
+        <td class="item">Rs. {{orderDetails.itemDetail.productPrice}}</td>
+        <td class="item"> Rs. {{orderDetails.quantity * orderDetails.itemDetail.productPrice}}</td>
+      
+      </tr>
+    </tbody>
+      <tbody *ngIf="summaryFlag == 'cart'">
+      <tr *ngFor="let orderDetails of orderDetails.productQuantity;let i = index;" >
+          
+          <td class="item"> Item {{i+1}}</td>
+          <td class="description">{{orderDetails.productTable.productName}}</td>
+          <td class="item">{{orderDetails.quantity}}</td>
+          <td class="item">Rs. {{orderDetails.productTable.productPrice}}</td>
+          <td class="item"> Rs. {{orderDetails.quantity * orderDetails.productTable.productPrice}}</td>
+        
+        </tr>
+
+      </tbody>
+    </table>
+     <b style="float:right;"> Grand Total: Rs. {{total}}</b>
+  </div>
+</div>

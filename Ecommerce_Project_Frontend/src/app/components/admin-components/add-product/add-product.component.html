@@ -1,0 +1,58 @@
+<br/>
+<br/>
+
+<h3>Add New Product</h3>
+<br/>
+<form class="row" #addProductForm="ngForm" (ngSubmit)="onSubmit(addProductForm.value);addProductForm.reset()">
+
+  <div class="row col-sm-9">
+  <div class="col-sm-12 row">
+    <label for="productName" class="col-sm-6 margin">Product Name : </label>
+    <input type="text" name="productName" class="col-sm-6 margin" ngModel required/>
+    </div>
+
+<div class="col-sm-12 row">
+    <label for="productCategory" class="col-sm-6 margin">Product Category : </label>
+    <input type="text" [(ngModel)]="pCategory" (change)="onChange()" name="productCategory" class="col-sm-6 margin" ngModel required/>
+  </div>
+
+  <div class="col-sm-12 row">
+    <label for="productQuantity" class="col-sm-6 margin">Product Quantity : </label>
+    <input type="number" name="productQuantity" class="col-sm-6 margin" ngModel required/>
+  </div>
+
+  <div class="col-sm-12 row center">
+    <label for="productPrice" class="col-sm-6 margin">Product Price : </label>
+    <input type="number" name="productPrice" class="col-sm-6 margin" ngModel required/>
+  </div>
+
+  <div class="col-sm-12 row">
+    <label for="description" class="col-sm-6 margin">Product Description : </label>
+    <textarea rows="6" cols="50" class="col-sm-6 margin" name="description" ngModel required></textarea>
+  </div>
+
+  <div class="col-sm-12 row">
+    <label for="productImage" class="col-sm-6 margin">Product Image : </label>
+    <input type="file" name="productImage" (change)="onImageSelected($event)" *ngIf="fileInput" required accept=".png,.jpg,.jpeg" class=" defaultPropertyRemove col-sm-6 margin " />
+    <input type="file"   *ngIf="fileInputDummy"disabled required accept=".png,.jpg" class=" defaultPropertyRemove col-sm-6 margin " />
+  </div>
+  <br/><br/><br/>
+  <div class="col-sm-12 row button-div">
+  
+    
+    <span class="  col-sm-6 margin ">
+      <input type="submit" value=" Save " [disabled]="addProductForm.invalid" class="btn" />
+    </span>
+    <span  class=" col-sm-6 margin ">
+      <input type="Reset" class="btn" />
+    </span>
+  
+  </div>
+</div>
+  
+<div class="col-sm-3  col-xs-3" *ngIf=flag>
+  <h3>Product Picture</h3>
+
+<img src="{{url}}images/{{imgUrl}}" class="imageAlign"/>
+</div>
+</form>

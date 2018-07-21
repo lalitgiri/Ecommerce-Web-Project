@@ -1,0 +1,35 @@
+
+.sub-div-list{
+    height:22vw;
+    width:20vw;
+    border-radius: 1vw;
+    margin: 1vw;
+    text-align: center;
+    border:0.2vw solid white;
+    display: inline-table;
+    background:whitesmoke;
+}
+.sub-div-list:hover{
+    
+    border:0.5vw solid cadetblue;
+      
+}
+
+.ccdiv{
+    padding:1vw;
+    overflow: hidden;
+}
+
+
+.imageAlign{
+    border-radius: 0.5vw;
+    height: 12vw;
+    width:auto;
+    padding-top: 1vw;
+   
+}
+
+
+label{
+    font-size: 0.9vw;
+}

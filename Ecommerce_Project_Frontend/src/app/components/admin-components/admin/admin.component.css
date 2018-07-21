@@ -1,0 +1,34 @@
+.adminNav{
+    background:cadetblue;
+    border-right:0.2vw solid white;
+    color:white;
+    text-align: center;
+}
+
+.height{
+    position: relative;
+    min-height: 90.5vh;;
+    width: 100%
+}
+
+
+.menu_links {
+     cursor: pointer;
+}
+
+.menu_links:hover{
+   color:black;
+}
+
+ul{
+    text-align:center;
+}
+a{
+    color:white;
+}
+a:hover{
+    color:black;
+}
+.disable-selection{
+    user-select: none;
+}

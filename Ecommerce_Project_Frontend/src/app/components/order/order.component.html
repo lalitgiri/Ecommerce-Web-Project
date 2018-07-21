@@ -1,0 +1,140 @@
+<div class="parent" *ngIf="(pFlag!='payment') && (pFlag!='hi')">
+  <div class="div">
+    User Details:
+    <button class="floatproperty btn-info" (click)="onclick(1)">View</button>
+    <div class="sub-div" *ngIf="flag==1">
+      Username :{{userDetails.name}}
+      <br/> Contact Number :{{userDetails.phoneNumber}}
+      <br/> Email Id :{{userDetails.emailId}}
+      <br/>
+
+
+      <button class="floatproperty btn-info" (click)="onclick(2)">Continue</button>
+    </div>
+
+  </div>
+
+  <div class="div">
+    Delivery Address:
+    <button class="floatproperty btn-info" (click)="onclick(2)">View</button>
+    <div class="sub-div" *ngIf="flag==2">
+      Address:
+      <br/>
+      <small>{{address}}
+        <br/> <input type="text" [(ngModel)]='address' [disabled]='editAddressFlag'/> 
+          <button (click)='edit()'>{{editAddressButton}}</button>
+      </small>
+      
+      <br/>
+
+    </div>
+  </div>
+
+  <div class="div">
+    Order Summary:
+    <button class="floatproperty btn-info" (click)="onclick(3)">View</button>
+    <div class="sub-div" *ngIf="flag==3">
+      <div *ngIf="summaryFlag=='cart'">
+
+        <div *ngFor="let data of products" class="content-div">
+          <div class="imgDiv">
+            <img src="{{imgUrl}}{{data.productTable.imageUrl}}" class="imageAlign" alt="" srcset="">
+          </div>
+          <div class="dataDiv">
+            Product Name : {{data.productTable.productName}}
+            <br/> Product Category : {{data.productTable.productCategory}}
+            <br/> Product Price : Rs. {{data.productTable.productPrice}}
+            <br/> Qunatity :{{data.quantity}}
+            <br/> Description : {{data.productTable.description}}
+          </div>
+
+        </div>
+
+      </div>
+
+      <div *ngIf="summaryFlag=='product'">
+        <div class="content-div">
+          <div class="imgDiv">
+            <img src="{{imgUrl}}{{products.imageUrl}}" class="imageAlign" alt="" srcset="">
+          </div>
+          <div class="dataDiv">
+            Product Name : {{products.productName}}
+            <br/> Product Category : {{products.productCategory}}
+            <br/> Product Price : Rs. {{products.productPrice}}
+            <br/> Qunatity : 1
+            <br/> Description : {{products.description}}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    Total Cost : Rs. {{cost}}
+  </div>
+
+  <div class="div">
+    Payment Options:
+    <button class="floatproperty btn-info" (click)="onclick(4)">View</button>
+    <div class="sub-div" *ngIf="flag==4">
+      <br/>
+      <div class="row">
+        <span class="col">
+          <input type="radio" name="paymentMode" value="cash" (click)="payment(5)" />&nbsp;&nbsp; Cash On Delivery</span>
+        <span class="col">
+          <input type="radio" name="paymentMode" value="credit" (click)="onclick(6)" />&nbsp;&nbsp;Credit/Debit</span>
+      </div>
+      <br/>
+    </div>
+  </div>
+
+</div>
+
+<div class="div" *ngIf="pFlag=='payment'">
+  Payment Options:
+  <button class="floatproperty btn-info" (click)="onclick(4)">Back</button>
+  <div class="sub-div" *ngIf="flag==6">
+    <b>Credit/Debit/ATM Card</b>
+    <br/>
+    <br/>
+    <form #addCardDetail="ngForm" (ngSubmit)="payment(5)" class="form">
+      <div>
+        Enter the Card Number :
+        <input type="text" name="CardNumber" class="form-control" ngModel required/>
+      </div>
+      <div>
+        Enter the Card Holder's Name :
+        <input type="text" name="CardHolderName" class="form-control" ngModel required/>
+      </div>
+      <div>
+        Enter CVV Number :
+        <input type="password" name="CVV" class="form-control" ngModel required/>
+      </div>
+      <div>
+        Enter Expiry Date :
+        <input type="month" name="expiryDate" class="form-control" ngModel required/>
+      </div>
+      <br/>
+      <br/>
+      <input class=" btn btn-warning" type="reset" />
+      <input type="submit" class="float-right  btn btn-primary" [disabled]="addCardDetail.invalid" value="Pay Rs.{{cost}}" />
+    </form>
+
+  </div>
+</div>
+
+
+<div *ngIf="flag==5" style="text-align: center">
+  
+  <h1>Order Confirmed</h1>
+
+  <br/>
+  <h3>Your Product Will Be Delivered Soon......</h3>
+
+ 
+  
+  <div  class="app-bill-generation">
+      <button (click)="print()" class="print-invoice-button">Print Invoice</button>
+    <app-bill-generation id="printContent" [orderDetails]="order" [summaryFlag]="summaryFlag"></app-bill-generation>
+  </div>
+
+</div>

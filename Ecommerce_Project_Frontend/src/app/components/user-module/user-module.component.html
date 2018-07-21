@@ -1,0 +1,111 @@
+<div style="text-align:center">
+<h1 >User Profile</h1>
+</div>
+<div class="user-details-div" *ngIf="response">
+  <div class="sub-div">
+    <label class="label"> Mobile Number </label>
+    <br/>
+    <input type="text" disabled value={{phone}} />
+    <label class="edit-link" data-toggle="modal" data-target="#changePassword"> Change Password </label>
+  </div>
+
+  <div class="sub-div">
+
+    <label class="label"> User Name </label>
+    <label class="edit-link" (click)=saveButtonFlag(1) *ngIf='flag!=1'>edit</label>
+    <label class="edit-link" (click)=saveButtonFlag(0) *ngIf="flag==1">cancel</label>
+    <br/>
+    <input type="text" [(ngModel)]="name" [disabled]='flag!=1' />
+    <button class="save-btn" *ngIf="flag==1" (click)='save()'>Save</button>
+
+  </div>
+  <div class="sub-div">
+    <label class="label"> Delivery Address </label>
+    <label class="edit-link" (click)=saveButtonFlag(2) *ngIf='flag!=2'>edit</label>
+    <label class="edit-link" (click)=saveButtonFlag(0) *ngIf="flag==2">cancel</label>
+    <br/>
+    <input type="text" [(ngModel)]="address" [disabled]='flag!=2' />
+    <button class="save-btn" *ngIf="flag==2" (click)='save()'>Save</button>
+  </div>
+  <div class="sub-div">
+    <label class="label"> Email Address </label>
+    <label class="edit-link" (click)=saveButtonFlag(3) *ngIf='flag!=3'>edit</label>
+    <label class="edit-link" (click)=saveButtonFlag(0) *ngIf="flag==3">cancel</label>
+    <br/>
+    <input type="text" [(ngModel)]="email" [disabled]='flag!=3' />
+    <button class="save-btn" *ngIf="flag==3" (click)='save()'>Save</button>
+  </div>
+
+
+</div>
+<div class="modal fade" id="changePassword">
+  <br/>
+  <br/>
+  <br/>
+  <div class="modal-dialog">
+    <div class="modal-content" style="background:rgba(0,0,0,0); border:none;">
+      <div class="modal-body">
+        <div class="pass-div ">
+
+
+          <label class="label">
+            Change Password
+          </label>
+
+          <div style="padding:1vw;">
+            <label class="pass-label">
+              Current Password
+            </label>
+            <input type="password" [(ngModel)]="cpass" class="pass-input" />
+
+
+          </div>
+          <div style="padding:1vw;">
+            <label class="pass-label">
+              New Password
+            </label>
+            <input type="password"  [(ngModel)]="npass" class="pass-input" />
+
+          </div>
+          <div style="padding:1vw;">
+            <label class="pass-label">
+              Re-Confirm Password
+            </label>
+            <input type="password" [(ngModel)]="rpass" class="pass-input" />
+          </div>
+
+          <div style="padding:1vw;">
+            <button (click)="changePass()"> Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="div">
+  <label class="heading"> My Orders</label>
+  <div class="sub-divs">
+
+    <div *ngFor="let data of orders" class="content-div">
+      <div class="imgDiv">
+        <img src="{{imgUrl}}{{data.itemDetail.imageUrl}}" class="imageAlign" alt="" srcset="">
+      </div>
+      <div class="dataDiv">
+        Product Name :
+        <small>{{data.itemDetail.productName}}</small>
+        <br/> Product Category :
+        <small>{{data.itemDetail.productCategory}}</small>
+        <br/> Product Price :
+        <small>Rs. {{data.itemDetail.productPrice}}</small>
+        <br/> Quantity :
+        <small>{{data.quantity}}</small>
+        <br/> Description :
+        <small>{{data.itemDetail.description}}</small>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>

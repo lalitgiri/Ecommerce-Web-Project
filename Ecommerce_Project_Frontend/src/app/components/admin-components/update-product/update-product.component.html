@@ -1,0 +1,102 @@
+<h3 class="font-size">
+  Modify Product Details</h3>
+<br/>
+
+<div class="container tableDimension">
+  <div class="table-responsive ">
+    <table class="table ">
+      <thead>
+          <th  class="leftBorderRadius">Product Id</th>
+          <th>Product Name</th>
+          <th>Product Category</th>
+          <th>Quantity</th>
+          <th>Product Price (Rs)</th>
+          <th class="rightBorderRadius">Product image</th>
+       
+      </thead>
+     
+      <tbody>
+        <tr *ngFor="let data of itemData" (click)="onSelect(data)">
+          <td class="leftBorderRadius">{{data.productId}}</td>
+          <td>{{data.productName}}</td>
+          <td>{{data.productCategory}}</td>
+          <td>{{data.productQuantity}}</td>
+          <td>Rs. {{data.productPrice}}</td>
+          <td  class="rightBorderRadius"> <a href="" class="nav-link" data-toggle="modal" (click)="imageViewFunction(data.imageUrl)" data-target="#imageView">View Image</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<br/>
+<h3>Update details</h3>
+<br/>
+<form class="row container" [formGroup]="updateProductForm"  (ngSubmit)="onUpdate(updateProductForm.value)">
+
+  <div class="col-sm-6 row bottom-margin">
+    <label for="productId" class="col">Product Id : </label>
+    <input type="text"  disabled name="productid"  [(ngModel)]="productid" class="col" formControlName="productid"/>
+  </div>
+
+  <div class="col-sm-6 row bottom-margin">
+    <label for="productName " class="col">Product Name : </label>
+    <input type="text" name="UproductName"  required [(ngModel)]="UproductName"  class="col " formControlName="UproductName"/>
+  </div>
+
+  <div class="col-sm-6 row bottom-margin">
+    <label for="productCategory" class="col ">Product Category : </label>
+    <input type="text" name="UproductCategory"  [(ngModel)]="UproductCategory"  class="col" required formControlName="UproductCategory"/>
+  </div>
+
+  <div class="col-sm-6 row bottom-margin">
+
+    <label for="productQuantity" class="col">Product Quantity : </label>
+    <input type="text" name="UproductQuantity"  [(ngModel)]="UproductQuantity" class="col" formControlName="UproductQuantity"/>
+  </div>
+
+  <div class="col-sm-6 row bottom-margin">
+
+    <label for="productPrice" class="col">Product Price : </label>
+    <input type="text" name="UproductPrice" [(ngModel)]="UproductPrice" class="col" formControlName="UproductPrice"/>
+  </div>
+
+  <div class="col-sm-6 row bottom-margin">
+    <label for="productImage" class="col ">Product Image : </label>
+    <input type="file" name="UproductImage" (change)="onImageSelected($event)"class="  col defaultPropertyRemove"  />
+    
+  </div>
+  
+  <div class="col-sm-6 row bottom-margin">
+
+    <label for="description" class="col">Product Description : </label>
+    <textarea rows="4" cols="50" class="col" name="description"  [(ngModel)]="description" formControlName="description"></textarea>
+  </div>
+
+
+
+  <div class="col-sm-6 row bottom-margin button-div">
+    <span class="  col-sm-6 ">
+      <input type="submit" value=" Update " class="btn" />
+    </span>
+    <span class=" col-sm-6 ">
+      <input type="Reset" class="btn" />
+    </span>
+
+  </div>
+
+</form>
+
+<div class="modal fade" id="imageView">
+  <br/>
+  <br/>
+  <br/>
+  <div class="modal-dialog">
+    <div class="modal-content" style="background:rgba(0,0,0,0); border:none;">
+      <div class="modal-body">
+        <img [src]="viewImage" class="imageSize" *ngIf="imgFlag"/>
+      </div>
+    </div>
+  </div>
+</div>

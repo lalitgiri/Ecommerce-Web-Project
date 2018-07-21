@@ -1,0 +1,104 @@
+<div (mouseleave)="hide($event)">
+  <!--This div is create to use the functionality of 
+                                      mouse enter and mouse leave property for menu!!!.-->
+  <br/>
+  <br/>
+  <nav class="navbar navbar-expand-md bg-nav fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand webSiteName " href="#">ZuperMarket<a class="domain">.com</a></a>
+  
+    <div class="searchForm ">
+        <form class="form-inline" #searchForm="ngForm" (ngSubmit)="search(searchForm.value); searchForm.reset()" >
+            <select style="background:gainsboro;" name="category" ngModel required>
+              <option style="background:white" selected="selected">-select-</option>
+              <option style="background:white" *ngFor="let data of itemData">{{data}}</option>
+            </select>
+
+            <input type="text" name="name" placeholder="search" ngModel required/>
+            <button type="submit" class="btn-bg " [disabled]="searchForm.invalid" >
+              <img src="../assets/icon/search icon.png" class="searchIcon image-fluid" />
+              
+            </button>
+          </form>
+    
+    </div>
+    <!--<span class="menu menu_links"  (mouseenter)="clicked(event)" (click)="clicked(event)" >-->
+    <span class="">
+      <span class="menu menu_links" (click)="clicked($event)">Menu</span>
+    </span>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="icon">=</span>
+
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse div-padding  navbar-collapse" id="collapsibleNavbar">
+
+      <ul class="navbar-nav float-right  disable-selection">
+          <li class="float-right "  *ngIf=token >
+              <a class="nav-link">Welcome </a>
+            </li> 
+        <li class="float-right "  *ngIf=token >
+          <a [routerLink]="['/account/user_account']" class="nav-link">{{name[0]}}</a>
+        </li> 
+         <li class=""  *ngIf=token>
+          <a href="" class="nav-link" data-toggle="modal" (click)="inValidateSession()">Logout</a>
+        </li>
+        <li class=""  *ngIf=tokenValue>
+          <a href="" class="nav-link float-right" data-toggle="modal" data-target="#myLogin">Login</a>
+        </li>
+        <li class=""  *ngIf=tokenValue>
+          <a href="" class="nav-link" data-toggle="modal" data-target="#mySignUp">Sign Up</a>
+        </li>
+        <li class="" *ngIf= "token && user=='User'">
+          <a class="nav-link " [routerLink]="['/cart']">Cart</a>
+        </li>
+      <li class="dropdown ">
+          <a class="nav-link dropdown-toggle menu_links " data-toggle="dropdown">
+            <label class="support">24x7 Support</label></a>
+          <div class="dropdown-menu dropdown-menu-right ">
+            <div class="dropdown-item">
+              <b>Call :</b> +91 9555104600</div>
+            <div class="dropdown-item">
+              <b>Mail Id :</b> lalitgiri1711@gmail.com</div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">
+              <b>Address :</b>Dadri,Uttar Pradesh,
+              <br/>India,Zip :203207</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <!-- Menu Code start-->
+  <div class="menu-div" *ngIf='status'>
+    <br/>
+    <span *ngFor="let data of itemData" class="sub-div-list" id="{{data}}" (click)="navigate(data) ">{{data}}</span>
+      </div>
+  <!-- Menu Code end-->
+</div>
+<div class="modal fade" id="myLogin">
+  <br/>
+  <br/>
+  <br/>
+  <div class="modal-dialog">
+    <div class="modal-content" style="background:rgba(0,0,0,0); border:none;">
+      <div class="modal-body">
+        <app-login></app-login>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="mySignUp">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background:rgba(0,0,0,0); border:none;">
+      <div class="modal-body">
+        <app-signup></app-signup>
+      </div>
+    </div>
+  </div>
+</div>
+<br/>

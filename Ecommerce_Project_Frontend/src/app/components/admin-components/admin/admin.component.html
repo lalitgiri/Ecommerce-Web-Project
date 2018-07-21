@@ -1,0 +1,43 @@
+
+<app-employee-login *ngIf="user!='admin'"></app-employee-login>
+
+
+<div class="row height" *ngIf="user=='admin'">
+  <nav class="col-sm-2 adminNav ">
+    <br/>
+    <label class="navbar-brand disable-selection">
+      <h3 (click)="operation('Welcome')">Menu</h3>
+    </label>
+    <!-- Links -->
+    <ul class="navbar-nav disable-selection">
+      <li class="nav-item menu_links">
+        <a class="nav-link " (click)="operation('addProduct')">Add Product</a>
+      </li>
+      <li class="nav-item menu_links">
+        <a class="nav-link " (click)="operation('modifyProduct')">Modify Product</a>
+      </li>
+      <li class="nav-item menu_links">
+        <a class="nav-link " (click)="operation('delete')">Delete Product</a>
+      </li>
+	  <!--
+      <li class="nav-item menu_links">
+        <a class="nav-link " (click)="operation('order')">Order Report</a>
+      </li>-->
+      <li class="nav-item menu_links">
+        <a class="nav-link " (click)="operation('addUser')">Add User</a>
+      </li>
+      <li class="nav-item menu_links">
+        <a class="nav-link " (click)="operation('modifyUser')">Modify User</a>
+      </li>
+<!--
+      <li class="nav-item menu_links">
+        <a class="nav-link " (click)="operation('addUser')">Get All Info</a>
+      </li>-->
+    </ul>
+
+  </nav>
+  <div class="col-sm-10 ">
+    <router-outlet name="admin"></router-outlet>
+  </div>
+
+</div>

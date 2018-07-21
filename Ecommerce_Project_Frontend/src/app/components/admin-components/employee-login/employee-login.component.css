@@ -1,0 +1,24 @@
+*{
+    font-size: 1.5vw;
+    
+}
+label{
+    color: whitesmoke;
+}
+
+.popUpBox{
+    margin:10vw auto;
+    
+    width:30vw;;
+    height:auto;
+    background:rgba(0,0,0,0.7);                 
+    padding:2vw;
+    border:0.14vw solid rgba(0, 0, 0,0.5) ;
+    border-top-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    position: relative;
+}
+
+.Login{
+    font-size: 3vw;
+}

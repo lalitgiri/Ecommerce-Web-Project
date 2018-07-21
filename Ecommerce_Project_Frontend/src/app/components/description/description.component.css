@@ -1,0 +1,54 @@
+
+.bg{
+    background: #e9efef;
+    border-radius: 0.5vw;
+}
+
+.padding{
+    padding: 4vw;
+  
+}
+.img-div{
+    margin :0 auto;
+    width: auto;
+    height: auto;
+    padding: 0.5vw;
+    background: white;
+}
+.imageAlign{
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 0.5vw;
+    height: auto;
+    width:100%;
+    padding-top: 1vw;
+}
+
+.quantity-div{
+    margin-top: 1vw;
+    margin: 0vw 12vw;
+}
+.quantity-input{
+    text-align: center;
+    width:4vw;
+    
+}
+
+.label{
+    font-weight: bolder;
+    font-size: 1.8vw;
+    text-align: center;
+   
+}
+
+.subLabel{
+    font-size: 1.5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+   
+}
+.description{
+    height:auto;
+}

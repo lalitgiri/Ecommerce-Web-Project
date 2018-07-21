@@ -1,0 +1,16 @@
+<hr>
+
+<label class="heading"><u>Search Results</u></label>
+<hr>
+<div class="cdiv">
+<div  *ngFor = "let data of itemData" class="sub-div-list" [routerLink]="['/description',data.productId]" id="{{data.name}}">
+  
+  <img src="{{url}}images/{{data.imageUrl}}" class="imageAlign"/>
+  <hr>
+  <div>
+    <b><label>{{data.productName}}</label></b><br/>
+    <label>Rs. {{data.productPrice}}</label>
+    <hr>
+  </div>
+</div>
+</div>

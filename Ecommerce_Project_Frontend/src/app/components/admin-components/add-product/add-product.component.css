@@ -1,0 +1,29 @@
+input{
+    text-align: center;
+}
+
+.defaultPropertyRemove{
+    padding-left:0%;
+}
+
+.margin{
+    margin-top:0.5vw;
+    margin-bottom: 0.5vw;
+}  
+h3{
+    text-align: center;
+}
+
+.imageAlign{
+    height: auto;
+    width:100%;
+}
+label{
+    padding-left: 5vw;
+    text-align: left;
+}
+
+.button-div{
+    margin-top:3vw;
+    padding-left: 15vw;  
+}

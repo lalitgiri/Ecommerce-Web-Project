@@ -1,0 +1,53 @@
+<div class="container">
+  <label class="label">{{pname}}</label>
+  <div class="row bg padding">
+
+    <div class="col-md-6">
+      <div class="img-div row" id="img-div">
+        <a [href]="imgUrl">
+          <img [src]="imgUrl" class="col-md-12 imageAlign" id="img" *ngIf='flag'> </a>
+       
+     </div>
+
+     <div class="quantity-div">
+        <button (click)="decreaseValue()">-</button>
+        <input type="text" class="quantity-input" [value]="quantity" disabled/>
+        <button (click)="addValue()">+</button>
+      </div>
+
+    </div>
+    <br/>
+
+    <div class="description  col-md-6 container " id="description">
+      <label class="label">Product Details :</label>
+      <br/>
+      <label class="subLabel">Product Name :
+             <small> {{pname}}</small>
+      </label>
+      <label class="subLabel">Product Price :
+        <small>Rs. {{pprice}}</small>
+      </label>
+      <br/>
+      <label class="subLabel">Product Category :
+        <small>{{pcategory}}</small>
+      </label><br/>
+      <label class="subLabel">Product Description :
+        <br/>
+        <small> <ul>
+              <li *ngFor="let data of description">
+                      {{data}}
+              </li>
+        </ul></small>
+      </label>
+      <br/>
+      <br/>
+      <div>
+        <button class="btn btn-primary text " (click)="addToCart()" id="add-cart">{{cartBtn}}</button>
+        <button class="btn btn-warning float-right text" (click)="onClick()" id="buy-now">&nbsp;&nbsp;Buy Now&nbsp;&nbsp;</button>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>

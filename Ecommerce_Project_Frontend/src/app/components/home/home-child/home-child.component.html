@@ -1,0 +1,13 @@
+
+
+
+<div *ngFor="let data of itemData" class="sub-div-list" [routerLink]="['/description',data.productId]">
+  <img src="{{url}}images/{{data.imageUrl}}"  class="imageAlign" >
+  <div class="ccdiv">
+    <b>
+      <label>{{data.productName}}</label><br/>
+    </b>
+      <label>Rs. {{data.productPrice}}</label>
+    
+    </div>
+    </div>
