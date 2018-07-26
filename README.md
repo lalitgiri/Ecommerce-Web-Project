@@ -1,10 +1,12 @@
 # Ecommerce-Web Project
 
 ***
+### Introduction
+
+It's a web based project by using  MVC architecture.
 
 
-
-##### Technology Used :
+### Technology Used :
 
 - Angular 4
 - Hibernate
