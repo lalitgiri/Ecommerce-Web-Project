@@ -3,7 +3,7 @@
 ***
 ### Introduction
 
-It's a web based project by using  MVC architecture.
+It's an attempt to emulate parts of an ecommerce enterprise UX with maximum functionalities. Current build missing connections to payment gateway feature.
 
 
 ### Technology Used :
