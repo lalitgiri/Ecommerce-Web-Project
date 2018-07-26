@@ -1,8 +1,8 @@
-#### Ecommerce-Web Project
+# Ecommerce-Web Project
 
 ***
 
-## Technology Uses :
+##### Technology Used :
 
 - Angular 4
 - Hibernate
