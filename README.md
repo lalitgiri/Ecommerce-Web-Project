@@ -9,6 +9,7 @@
 - Spring Boot
 - Java
 - Maven
+- Postgres (Database)
 
 
   
